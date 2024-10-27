@@ -5,7 +5,7 @@ html {
   min-height:800px;
 }
 body {
-  background: url('https://i.pinimg.com/originals/48/79/86/487986c17560a8ed1afdc55e480e5be2.png');
+  background: url("background.webp");
   background-size:cover;
   background-repeat:no-repeat;
   text-align: center;
@@ -71,7 +71,8 @@ section {
     width: 100%;
     display: block;
     /* background-color: blue; */
-    background-color: #f3fffd;
+    background-color: #ffffff;
+    /* background-color: #f9c9c9; */
     height: 60px;
     position: fixed; /* Div будет "прилипать" к экрану */
     z-index: 9999; /* Максимальное значение z-индекса */
@@ -79,7 +80,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* opacity: .3; */
+    opacity: .8;
     font-size: 80;
 
 }
