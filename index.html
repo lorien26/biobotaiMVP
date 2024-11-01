@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -78,5 +78,51 @@
 		<div class="button" id="prev">&larr; Назад</div>
 		<div class="button" id="next">Продолжить &rarr;</div>
 		<div class="button" id="submit">Рассчитать план тренировок</div>
+	</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="betaStyles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="./betaScript.js"></script>
+		<title>BioBotAI</title>
+	</head>
+	<body>
+		<div class="header">
+			<img class="logoHeader" src="./logoWithoutBack.PNG" />
+			<div>
+				<span style="color: black">
+					BioBot<span styl="color: #7fffd4">AI</span>
+				</span>
+			</div>
+		</div>
+        <h1>Подбор диеты</h1>
+		<div class="quiz" id="quiz">
+			<div class="quiz__menu">
+				<div class="quiz__questions" id="questions"></div>
+				<div class="quiz__results">
+					<div class="quiz__results__result" id="results" hidden></div>
+				</div>
+				<div class="buttons">
+					<button class="button" id="back" disabled>Назад</button>
+					<button class="button" id="next" disabled>Далее</button>
+					<button class="button" id="result" hidden>
+						Подобрать план
+					</button>
+					<button class="button" id="again" hidden>
+						Начать сначала
+					</button>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
