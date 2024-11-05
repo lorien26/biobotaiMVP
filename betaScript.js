@@ -172,6 +172,11 @@ const data = {
                 name: "Лаваш",type: "checkbox",
                 attr: '',
             },
+            {
+                id:5,
+                name: "Лепешка",type: "checkbox",
+                attr: '',
+            },
         ]
     },
     5:{
@@ -272,10 +277,9 @@ function main(){
                 }).join('')
             }
             else {
-
                 return `<div class="checkbox-column"> 
                 ${data[index].answers.map((ans) => {
-                return `<input type=${ans.type} class="answer-input checkbox" name=${index} id=${ans.id} required ${ans.attr}><span>${ans.name}</span>`
+                return `<div class="checkbox-item"><input type=${ans.type} class="answer-input checkbox" name=${index} id=${ans.id} ${ans.attr}>${ans.name}</div>`
             }).join('\n')}
             </div>`
         }
@@ -380,6 +384,6 @@ function main(){
             }
         }
     })
-    renderQuestions(0)
-    // renderQuestions(Object.keys(data).length - 1)
+    // renderQuestions(0)
+    renderQuestions(Object.keys(data).length - 1)
 }
