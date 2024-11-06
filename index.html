@@ -1,86 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="styles.css" />
-		<script src="./JQuery.js"></script>
-		<script src="./script.js"></script>
-		<title>BioBotAI</title>
-	</head>
-	<body>
-		<div class="header">
-            <img class="logoHeader" src="./logoWithoutBack.PNG">
-			<b>
-				<span style="color: black">
-					BioBot<span styl="color: #7fffd4">AI</span>
-				</span>
-			</b>
-		</div>
-		<div id="svg_wrap"></div>
-		<h1>План тренировок</h1>
-		<section>
-			<p>Ваши параметры</p>
-			<input type="text" placeholder="Рост" />
-			<input type="text" placeholder="Вес" />
-			<input type="text" placeholder="Возраст" />
-			<input type="text" placeholder="Пол" />
-		</section>
-
-		<section>
-			<p>Address</p>
-			<input type="text" placeholder="Телосложение" />
-			<input type="text" placeholder="Уровень физической подготовки" />
-			<input type="text" placeholder="Уровень физической активности" />
-			<input type="text" placeholder="Цель тренировок" />
-		</section>
-
-        
-		<section>
-            <p>Оцените уровень вашего физического развития</p>
-			<input type="text" placeholder="Плечи" />
-			<input type="text" placeholder="Предплечья" />
-			<input type="text" placeholder="Спина" />
-			<input type="text" placeholder="Бицепс" />
-			<input type="text" placeholder="Трицепс" />
-			<input type="text" placeholder="Грудь" />
-			<input type="text" placeholder="Ноги" />
-		</section>
-        
-        <section>
-            <p>Contact information</p>
-            <input type="text" placeholder="Интенсивность тренировок" />
-            <input type="text" placeholder="Количество свободного времени" />
-            <input type="text" placeholder="" />
-        </section>
-        <section>
-            <p>Заболевания</p>
-            <input type="text" placeholder="Грыжа / протрузия" />
-            <input type="text" placeholder="Остеохондроз" />
-            <input type="text" placeholder="Варикоз (ноги)" />
-            <input type="text" placeholder="Сколиоз" />
-            <input type="text" placeholder="Кифоз" />
-            <input type="text" placeholder="Диастаз" />
-        </section>
-		<section>
-			<p>Ваши данные: </p>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-				eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-				enim ad minim veniam, quis nostrud exercitation ullamco laboris
-				nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-				in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-				nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-				sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-		</section>
-
-		<div class="button" id="prev">&larr; Назад</div>
-		<div class="button" id="next">Продолжить &rarr;</div>
-		<div class="button" id="submit">Рассчитать план тренировок</div>
-	</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -93,7 +10,6 @@
 			href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
 			rel="stylesheet"
 		/>
-		<script src="./betaScript.js"></script>
 		<title>BioBotAI</title>
 	</head>
 	<body>
@@ -101,11 +17,11 @@
 			<img class="logoHeader" src="./logoWithoutBack.PNG" />
 			<div>
 				<span style="color: black">
-					BioBot<span styl="color: #7fffd4">AI</span>
+					BioBot<span style="color: #7fffd4">AI</span>
 				</span>
 			</div>
 		</div>
-        <h1>Подбор диеты</h1>
+		<h1>Подбор диеты</h1>
 		<div class="quiz" id="quiz">
 			<div class="quiz__menu">
 				<div class="quiz__questions" id="questions"></div>
@@ -115,14 +31,11 @@
 				<div class="buttons">
 					<button class="button" id="back" disabled>Назад</button>
 					<button class="button" id="next" disabled>Далее</button>
-					<button class="button" id="result" hidden>
-						Подобрать план
-					</button>
-					<button class="button" id="again" hidden>
-						Начать сначала
-					</button>
+					<button class="button" id="result" hidden>Подобрать план</button>
+					<button class="button" id="again" hidden>Начать сначала</button>
 				</div>
 			</div>
 		</div>
+		<script src="./betaScript.js" type="module"></script>
 	</body>
 </html>

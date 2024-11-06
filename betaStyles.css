@@ -1,155 +1,172 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@400;700&display=swap');
 
 html {
-  height: 100%;
-  min-height:800px;
+	height: 100%;
+	min-height: 800px;
 }
 body {
-  background: url("background.webp");
-  background-size:cover;
-  background-repeat:no-repeat;
-  text-align: center;
- font-family: 'Noto Sans', sans-serif;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+	height: 1000px;
+	background: url('background.webp');
+	background-size: cover;
+	background-repeat: repeat-y;
+	text-align: center;
+	font-family: 'Noto Sans', sans-serif;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
-.quiz__menu{
-    padding: 4%;
-    max-width: 50%;
-    margin: auto;
-    background:white;
-    background:rgba(255,255,255,0.9);
-    backdrop-filter:blur(10px);
-    box-shadow:0px 2px 10px rgba(0,0,0,0.3);
-    border-radius:1%;
-    transition:transform 0.2s ease-in-out;
+.quiz__menu {
+	padding: 4%;
+	max-width: 50%;
+	margin: auto;
+	background: white;
+	background: rgba(255, 255, 255, 0.9);
+	backdrop-filter: blur(10px);
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+	border-radius: 1%;
+	transition: transform 0.2s ease-in-out;
 }
-@media(max-width: 768px){
-    .quiz__menu{
-        padding: 4%;
-        max-width: 85%;
-        margin: auto;
-        background:white;
-        background:rgba(255,255,255,0.9);
-        backdrop-filter:blur(10px);
-        box-shadow:0px 2px 10px rgba(0,0,0,0.3);
-        border-radius:1%;
-        transition:transform 0.2s ease-in-out;
-    }
-    }
-    
-h1{
-  font-weight:400;
-  padding-top:4%;
-  margin-top:0;
-  font-family: 'Roboto Slab', serif;
+@media (max-width: 768px) {
+	.quiz__menu {
+		padding: 0;
+		max-width: 85%;
+		margin: auto;
+		background: white;
+		background: rgba(255, 255, 255, 0.9);
+		backdrop-filter: blur(10px);
+		box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+		border-radius: 1%;
+		transition: transform 0.2s ease-in-out;
+	}
+}
+
+h1 {
+	font-weight: 400;
+	padding-top: 4%;
+	margin-top: 0;
+	font-family: 'Roboto Slab', serif;
 }
 .header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    display: block;
-    background-color: #ffffff;
-    height: 8%;
-    position: fixed; /* Div будет "прилипать" к экрану */
-    z-index: 9999; /* Максимальное значение z-индекса */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: .9;
-
+	margin: 0;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	display: block;
+	background-color: #ffffff;
+	height: 8%;
+	position: fixed;
+	z-index: 9999;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+		'Lucida Sans', Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.9;
 }
-.header div{
-    font-family: "DynaPuff";
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 300%;
+.header div {
+	font-family: 'DynaPuff';
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 300%;
 }
-.logoHeader{
-    height: 85%;
-    width: auto;
+.logoHeader {
+	height: 90%;
+	width: auto;
 }
-.checkbox-column{
-    /* display: grid;
+.checkbox-column {
+	/* display: grid;
     grid-template-columns: 1fr 1fr;
     /*************************/
-    /* max-width: 330px;
+	/* max-width: 330px;
     width: 100%;
-    margin-bottom: 10px; */ 
-    /* column-count: 2; */
+    margin-bottom: 10px; */
+	/* column-count: 2; */
+}
+.checkbox {
+	transform: scale(1.4);
+	color: aquamarine;
+}
+.checkbox-item {
+	margin: 1px;
+	text-align: center;
+	font-size: 20px;
+	display: inline-block;
+	padding: 5px;
+}
+.quiz__questions__answers {
+	list-style: none;
+}
 
+.answer-input {
+	width: 100%;
+	margin: 7px 0px;
+	display: inline-block;
+	padding: 12px 25px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	border: 1px solid lightgrey;
+	font-size: 1em;
+	font-family: inherit;
+	background: white;
 }
-.checkbox{
-    transform: scale(1.4);
+.quiz__results__result {
+	margin: 1%;
+	margin-bottom: 25px;
+	display: inline-block;
+	border-radius: 5px;
+	border: 2px solid black;
+	padding: 10%;
 }
-.checkbox-item{
-    /* margin: 20px; */
-    text-align: center;
-    font-size: 20px;
-    display:inline-block;
-    padding: 5px;
+.quiz__results__result[hidden] {
+	display: none;
 }
-.quiz__questions__answers{
-    list-style: none;
+p {
+	text-align: center;
+	margin-top: 0;
+	font-size: 150%;
+}
+.button {
+	margin-left: 30px;
+	width: 200px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	background-color: lightgreen;
+	border: none;
+	border-radius: 20px;
+	margin-bottom: 20px;
+	cursor: pointer;
+	transition: background-color 0.3s;
 }
 
+.button:hover {
+	background-color: rgb(125, 207, 125);
+}
 
-.answer-input{
-    width: 100%;
-  margin: 7px 0px;
-  display: inline-block;
-  padding: 12px 25px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
-  font-size: 1em;
-  font-family:inherit;
-  background:white;
+.button:active {
+	background-color: rgb(114, 192, 114);
 }
-.quiz__results__result{
-    margin: 1%;
-    display:inline-block;
-  border-radius: 5px;
-    border: 2px solid black;
-    padding: 10%;
+
+.button[hidden] {
+	display: none;
 }
-.quiz__results__result[hidden]{
-    display:none;
+.button[disabled] {
+	margin-left: 30px;
+	width: 200px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	background-color: rgb(197, 250, 197);
+	border: none;
+	border-radius: 20px;
+	margin-bottom: 20px;
+	cursor: default;
+	transition: background-color 0.3s;
 }
-p{
-    text-align:center;
-  margin-top:0;
-  font-size: 150%;
-  }
-  .button{
-    background: rgb(237, 40, 70);
-    border-radius: 5px;
-    padding: 3% 7%;
-    display: inline;
-    margin: 10px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    box-shadow:0px 2px 5px rgb(0,0,0,0.5);
-  }
-  .button[hidden]{
-    display:none;
-  }
-  .button[disabled]{
-    background: rgb(236, 88, 111);
-    border-radius: 5px;
-    padding: 3% 7%;
-    display: inline;
-    margin: 10px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    box-shadow:0px 2px 5px rgb(0,0,0,0.5);
-  }
