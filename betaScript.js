@@ -107,6 +107,18 @@ const data = {
 				type: 'checkbox',
 				attr: '',
 			},
+            {
+				id: 4,
+				name: 'Морперодукты',
+				type: 'checkbox',
+				attr: '',
+			},
+            {
+				id: 5,
+				name: '',
+				type: 'input',
+				attr: 'placeholder="Другое"',
+			},
 		],
 	},
 	3: {
@@ -161,6 +173,12 @@ const data = {
 				type: 'checkbox',
 				attr: '',
 			},
+            {
+				id: 8,
+				name: '',
+				type: 'input',
+				attr: 'placeholder="Другое"',
+			},
 		],
 	},
 	4: {
@@ -203,6 +221,12 @@ const data = {
 				type: 'checkbox',
 				attr: '',
 			},
+            {
+				id: 6,
+				name: '',
+				type: 'input',
+				attr: 'placeholder="Другое"',
+			},
 		],
 	},
 	5: {
@@ -239,6 +263,12 @@ const data = {
 				type: 'checkbox',
 				attr: '',
 			},
+            {
+				id: 5,
+				name: '',
+				type: 'input',
+				attr: 'placeholder="Другое"',
+			},
 		],
 	},
 }
@@ -249,7 +279,7 @@ async function getOpenAIResponse(prompt) {
      в крупах: ${prompt.крупы}
     в хлебе: ${prompt.хлеба}
     в мясе: ${prompt.мясо}
-    Подробно распиши к каким результатам я приду через 30 дней, следуя твоему плану тренировок и питания.`
+    Подробно распиши к каким результатам я приду через 30 дней, следуя твоему плану тренировок и питания, а также напиши граммовки каждого блюда`
 	console.log('Sended AI Question: ' + aiQuestion)
 	return await fetch('https://api.proxyapi.ru/openai/v1/chat/completions', {
 		method: 'POST',
