@@ -77,6 +77,17 @@ const data = {
                 <option value="Активный образ жизни">
                 </datalist>`,
 			},
+			{
+				id: 4,
+				name: 'Место тренировок',
+				type: 'text',
+				attr: 'list="options4" placeholder="Где вы можете тренироваться"',
+				html: `<datalist id="options4">
+                <option value="Только дома">
+                <option value="Только в фитнес клубе">
+                <option value="В фитнес клубе и дома">
+                </datalist>`,
+			},
 		],
 	},
 	2: {
@@ -117,7 +128,7 @@ const data = {
 				id: 5,
 				name: '',
 				type: 'input',
-				attr: 'placeholder="Другое"',
+				attr: 'placeholder="Другое" style="transform: scale(1) !important"',
 			},
 		],
 	},
@@ -177,7 +188,7 @@ const data = {
 				id: 8,
 				name: '',
 				type: 'input',
-				attr: 'placeholder="Другое"',
+				attr: 'placeholder="Другое" style="transform: scale(1) !important"',
 			},
 		],
 	},
@@ -225,7 +236,7 @@ const data = {
 				id: 6,
 				name: '',
 				type: 'input',
-				attr: 'placeholder="Другое"',
+				attr: 'placeholder="Другое" style="transform: scale(1) !important"',
 			},
 		],
 	},
@@ -263,18 +274,48 @@ const data = {
 				type: 'checkbox',
 				attr: '',
 			},
-            {
+			{
 				id: 5,
+				name: 'Свинина',
+				type: 'checkbox',
+				attr: '',
+			},
+			{
+				id: 6,
+				name: 'Баранина',
+				type: 'checkbox',
+				attr: '',
+			},
+			{
+				id: 7,
+				name: 'Рыба',
+				type: 'checkbox',
+				attr: '',
+			},
+			{
+				id: 8,
+				name: 'Морепродукты',
+				type: 'checkbox',
+				attr: '',
+			},
+			{
+				id: 9,
+				name: 'Индейка',
+				type: 'checkbox',
+				attr: '',
+			},
+            {
+				id: 10,
 				name: '',
 				type: 'input',
-				attr: 'placeholder="Другое"',
+				attr: 'placeholder="Другое" style="transform: scale(1) !important"',
 			},
 		],
 	},
 }
 async function getOpenAIResponse(prompt) {
 	const aiQuestion = `Представь, что ты профессиональный фитнес-тренер и диетолог, напиши тренировочный план на 30 дней на основе моих входных данных: рост ${prompt.рост} сантиметров; вес ${prompt.вес}; пол ${prompt.пол}; возраст ${prompt.возраст}
-    Я могу уделять тренировкам ${prompt.часы} часов в неделю, я оцениваю свою физическую подготовку как ${prompt.уровень}, я веду ${prompt.образ}. Моя цель — это ${prompt.цель}.
+    Я могу уделять тренировкам ${prompt.часы} часов в неделю, я оцениваю свою физическую подготовку как ${prompt.уровень}, я веду ${prompt.образ}. Моя цель — это ${prompt.цель}, учити, что я могу заниматься только ${prompt.place}.
     С учетом подобранных тобою тренировок распиши мне правильное питание на каждый день, чтобы достичь моей цели, учитывая мою пищевую аллергию на такие продукты как ${prompt.аллергия} а также учитывая мои предпочтения
      в крупах: ${prompt.крупы}
     в хлебе: ${prompt.хлеба}
@@ -444,8 +485,18 @@ function main() {
 			meat += 'Говядина, '
 		}
 
-	
-		
+	function setStyles(){
+        const sheet = document.styleSheets[0];
+sheet.insertRule(`body {
+	font: bold 1em/1.5 "Comfortaa", sans-serif;
+	place-items: center;
+	align-content: center;
+}`, sheet.cssRules.length);
+sheet.insertRule(`:root {
+	--dur: 8s;
+}`, sheet.cssRules.length);
+    }
+		setStyles()
 		questions.hidden = true
 		result.hidden = false
 		next.hidden = true
@@ -454,7 +505,57 @@ function main() {
 		againBtn.hidden = false
 		results.hidden = false
         results.innerHTML = `
-		<div class="results__AIResult">Обработка результатов...</div>`
+		<div class="results__AIResult"><div class="hexagon" aria-label="Animated hexagonal ripples">
+	<div class="hexagon__group">
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+	</div>
+	<div class="hexagon__group">
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+	</div>
+	<div class="hexagon__group">
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+	</div>
+	<div class="hexagon__group">
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+	</div>
+	<div class="hexagon__group">
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+	</div>
+	<div class="hexagon__group">
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+		<div class="hexagon__sector"></div>
+	</div>
+</div>
+<p aria-label="Loading">Обработка результатов</p></div>`
         var resultAI = await getOpenAIResponse({
 			вес: dataResults[0][1],
 			пол: dataResults[0][3],
@@ -468,6 +569,7 @@ function main() {
 			крупы: grain,
 			хлеба: bread,
 			мясо: meat,
+            place: dataResults[1][4]
 		})
         const parsedResponse = md.render(resultAI)
 		results.innerHTML = `
